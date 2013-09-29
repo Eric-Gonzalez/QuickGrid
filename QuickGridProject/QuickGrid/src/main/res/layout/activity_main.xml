@@ -7,5 +7,6 @@
         android:name="com.ericrgon.quickgrid.QuickGrid"
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout="@layout/quick_grid" />
 </FrameLayout>

@@ -15,6 +15,7 @@ public class QuickGrid extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.quick_grid,container,false);
 
         final QuickGridView gridView = (QuickGridView) view.findViewById(R.id.grid);
@@ -42,6 +43,5 @@ public class QuickGrid extends Fragment{
 
         return view;
     }
-
 
 }

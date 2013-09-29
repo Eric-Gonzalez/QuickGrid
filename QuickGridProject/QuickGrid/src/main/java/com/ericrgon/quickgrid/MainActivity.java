@@ -2,7 +2,6 @@ package com.ericrgon.quickgrid;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 
 public class MainActivity extends FragmentActivity {
@@ -12,11 +11,6 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        QuickGrid quickGrid = new QuickGrid();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content,quickGrid);
-        fragmentTransaction.commit();
     }
 
 
@@ -26,5 +20,4 @@ public class MainActivity extends FragmentActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
 }
