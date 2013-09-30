@@ -9,24 +9,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class QuickGrid extends Fragment{
-
-    private LinearLayout naviation;
+public class NavigationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.quick_grid,container,false);
-
-        final QuickGridView gridView = (QuickGridView) view.findViewById(R.id.grid);
-        final CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity());
-        gridView.setAdapter(categoryAdapter);
+        View view = inflater.inflate(R.layout.navigation_layout,container,false);
 
         //TODO Replace with a view capable of accepting an adapter.
-        naviation = (LinearLayout) view.findViewById(R.id.navigation);
+        LinearLayout naviation = (LinearLayout) view.findViewById(R.id.navigation);
         String[] colors = getResources().getStringArray(R.array.color);
         char start = 'A';
-        for(int i = 0 ; i < categoryAdapter.getCategorySize() ; i++){
+        for(int i = 0 ; i < 5 ; i++){
             TextView item = (TextView) inflater.inflate(R.layout.navigation_item,container,false);
             item.setText(String.valueOf((char) (start + i)));
             item.setBackgroundColor(Color.parseColor(colors[i]));
@@ -35,7 +28,7 @@ public class QuickGrid extends Fragment{
                 @Override
                 public void onClick(View view) {
                     //Scroll to the target category.
-                    gridView.smoothScrollToCategory(catNumber);
+//                    gridView.smoothScrollToCategory(catNumber);
                 }
             });
             naviation.addView(item);

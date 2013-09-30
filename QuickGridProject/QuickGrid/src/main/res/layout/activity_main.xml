@@ -1,12 +1,19 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingPane"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <fragment
-        android:name="com.ericrgon.quickgrid.QuickGrid"
-        android:id="@+id/content"
-        android:layout_width="match_parent"
+        android:name="com.ericrgon.quickgrid.NavigationFragment"
+        android:id="@+id/navigation"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
-        tools:layout="@layout/quick_grid" />
-</FrameLayout>
+        tools:layout="@layout/navigation_layout" />
+    <fragment
+        android:name="com.ericrgon.quickgrid.QuickGridFragment"
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:layout="@layout/quick_grid"/>
+</android.support.v4.widget.SlidingPaneLayout>

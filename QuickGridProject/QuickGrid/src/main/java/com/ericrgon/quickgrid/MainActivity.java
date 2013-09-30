@@ -2,15 +2,19 @@ package com.ericrgon.quickgrid;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.SlidingPaneLayout;
 import android.view.Menu;
 
 public class MainActivity extends FragmentActivity {
 
+    SlidingPaneLayout slidingPaneLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+        slidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.slidingPane);
+        slidingPaneLayout.openPane();
     }
 
 
