@@ -7,12 +7,13 @@
     <fragment
         android:name="com.ericrgon.quickgrid.NavigationFragment"
         android:id="@+id/navigation"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         tools:layout="@layout/navigation_layout" />
     <fragment
         android:name="com.ericrgon.quickgrid.QuickGridFragment"
         android:id="@+id/content"
+        android:layout_marginLeft="30dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         tools:layout="@layout/quick_grid"/>

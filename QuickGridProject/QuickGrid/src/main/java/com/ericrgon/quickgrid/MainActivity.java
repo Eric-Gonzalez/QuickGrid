@@ -14,7 +14,6 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         slidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.slidingPane);
-        slidingPaneLayout.openPane();
     }
 
 

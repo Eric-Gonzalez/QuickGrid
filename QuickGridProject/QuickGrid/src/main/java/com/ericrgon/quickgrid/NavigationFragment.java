@@ -21,7 +21,7 @@ public class NavigationFragment extends Fragment {
         char start = 'A';
         for(int i = 0 ; i < 5 ; i++){
             TextView item = (TextView) inflater.inflate(R.layout.navigation_item,container,false);
-            item.setText(String.valueOf((char) (start + i)));
+            item.setText(String.valueOf((char) (start + i)) + " More Details");
             item.setBackgroundColor(Color.parseColor(colors[i]));
             final int catNumber = i;
             item.setOnClickListener(new View.OnClickListener() {
