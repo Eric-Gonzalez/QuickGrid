@@ -3,6 +3,7 @@ package com.ericrgon.quickgrid;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class NavigationFragment extends Fragment {
+
+    public static interface CategoryListener{
+
+        void onCategoryClicked(int category);
+    }
+
+    private CategoryListener categoryListener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -27,14 +35,17 @@ public class NavigationFragment extends Fragment {
             item.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Scroll to the target category.
-//                    gridView.smoothScrollToCategory(catNumber);
+                    Log.d("CLICK","Clicked" + catNumber);
+                    categoryListener.onCategoryClicked(catNumber);
                 }
             });
-            naviation.addView(item);
+            naviation.addView(item,i);
         }
 
         return view;
     }
 
+    public void setCategoryListener(CategoryListener categoryListener) {
+        this.categoryListener = categoryListener;
+    }
 }

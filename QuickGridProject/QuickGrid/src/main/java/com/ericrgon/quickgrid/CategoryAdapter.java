@@ -15,7 +15,7 @@ import java.util.List;
 public class CategoryAdapter extends ArrayAdapter<String> {
 
     public static final int CATEGORIES_NUM = 5;
-    public static final int ITEM_NUM = 21;
+    public static final int ITEM_NUM = 51;
 
     private LayoutInflater inflater;
     private List<Integer> colors;
