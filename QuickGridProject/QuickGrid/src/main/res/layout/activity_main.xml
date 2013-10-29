@@ -10,9 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         tools:layout="@layout/navigation_layout" />
-    <fragment
-        android:name="com.ericrgon.quickgrid.QuickGridFragment"
+    <com.ericrgon.quickgrid.QuickGridView
         android:id="@+id/grid"
+        android:numColumns="3"
         android:layout_marginLeft="35dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

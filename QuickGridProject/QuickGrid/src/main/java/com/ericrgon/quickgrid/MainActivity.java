@@ -10,7 +10,7 @@ public class MainActivity extends FragmentActivity {
 
     SlidingPaneLayout slidingPaneLayout;
     NavigationFragment navigationFragment;
-    QuickGridFragment quickGridFragment;
+    QuickGridView quickGridFragment;
 
 
 
@@ -21,7 +21,10 @@ public class MainActivity extends FragmentActivity {
         slidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.slidingPane);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        quickGridFragment = (QuickGridFragment) fragmentManager.findFragmentById(R.id.grid);
+        quickGridFragment = (QuickGridView) findViewById (R.id.grid);
+        final CategoryAdapter categoryAdapter = new CategoryAdapter(MainActivity.this);
+        quickGridFragment.setAdapter(categoryAdapter);
+
         navigationFragment = (NavigationFragment) fragmentManager.findFragmentById(R.id.navigation);
         navigationFragment.setCategoryListener(new NavigationFragment.CategoryListener() {
             @Override
