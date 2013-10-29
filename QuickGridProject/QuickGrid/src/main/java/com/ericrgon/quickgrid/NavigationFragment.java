@@ -26,10 +26,9 @@ public class NavigationFragment extends Fragment {
         //TODO Replace with a view capable of accepting an adapter.
         LinearLayout naviation = (LinearLayout) view.findViewById(R.id.navigation);
         String[] colors = getResources().getStringArray(R.array.color);
-        char start = 'A';
         for(int i = 0 ; i < 5 ; i++){
             TextView item = (TextView) inflater.inflate(R.layout.navigation_item,container,false);
-            item.setText(String.valueOf((char) (start + i)) + " More Details");
+            item.setText(String.valueOf(i + " More Details"));
             item.setBackgroundColor(Color.parseColor(colors[i]));
             final int catNumber = i;
             item.setOnClickListener(new View.OnClickListener() {
